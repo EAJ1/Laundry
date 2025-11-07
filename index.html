@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean & Fresh Laundry</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="#64ffda" stroke-width="2" fill="none"/>
+                        <circle cx="20" cy="20" r="12" stroke="#64ffda" stroke-width="1" fill="none"/>
+                        <path d="M20 8 L20 12" stroke="#64ffda" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M20 28 L20 32" stroke="#64ffda" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M8 20 L12 20" stroke="#64ffda" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M28 20 L32 20" stroke="#64ffda" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="20" cy="20" r="3" fill="#64ffda"/>
+                    </svg>
+                </div>
+                <span class="logo-text">LaundryPro</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-btn">🌙</button>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-container">
+            <div class="hero-text">
+                <h1 class="hero-title" id="hero-title">Sparkling Clean Clothes,<br>Delivered with Care</h1>
+                <p class="hero-subtitle">Experience the joy of fresh, perfectly laundered garments with our premium laundry service.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" id="magic-btn">✨ Magic Clean</button>
+                    <button class="btn-secondary">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="illustration" id="interactive-svg">
+                    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="laundryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                        </defs>
+                        <circle cx="200" cy="200" r="150" fill="url(#laundryGradient)" opacity="0.1" filter="url(#glow)"/>
+                        <path id="washing-machine" d="M150 180 Q200 120 250 180 Q250 250 200 280 Q150 250 150 180" fill="none" stroke="#4facfe" stroke-width="3" opacity="0.8"/>
+                        <circle cx="180" cy="160" r="8" fill="#00f2fe" class="eye"/>
+                        <circle cx="220" cy="160" r="8" fill="#00f2fe" class="eye"/>
+                        <rect x="170" y="200" width="60" height="40" rx="5" fill="#4facfe" opacity="0.6"/>
+                        <text x="200" y="225" text-anchor="middle" fill="white" font-family="Poppins" font-size="14" font-weight="600">Clean</text>
+                        <g id="sparkles">
+                            <circle cx="120" cy="150" r="2" fill="#ffd700" opacity="0.8"/>
+                            <circle cx="280" cy="170" r="2" fill="#ffd700" opacity="0.8"/>
+                            <circle cx="150" cy="280" r="2" fill="#ffd700" opacity="0.8"/>
+                            <circle cx="250" cy="300" r="2" fill="#ffd700" opacity="0.8"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+        <div class="theme-toggle">
+            <button id="theme-btn">🌙</button>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Why Choose Us?</h2>
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">✨</div>
+                        <h4>Eco-Friendly</h4>
+                        <p>We use biodegradable detergents and energy-efficient machines.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">⚡</div>
+                        <h4>Fast Service</h4>
+                        <p>Same-day service available for most items.</p>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🛡️</div>
+                        <h4>Quality Guarantee</h4>
+                        <p>100% satisfaction guarantee on all our services.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="illustration">
+                    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="aboutGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <rect x="50" y="100" width="200" height="150" rx="10" fill="url(#aboutGradient)" opacity="0.8"/>
+                        <circle cx="100" cy="130" r="15" fill="#4facfe"/>
+                        <circle cx="200" cy="130" r="15" fill="#00f2fe"/>
+                        <rect x="80" y="160" width="40" height="20" rx="5" fill="#4facfe"/>
+                        <rect x="180" y="160" width="40" height="20" rx="5" fill="#00f2fe"/>
+                        <text x="150" y="200" text-anchor="middle" fill="#333" font-family="Poppins" font-size="16" font-weight="600">Fresh & Clean</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="28" fill="none" stroke="#4facfe" stroke-width="2"/>
+                            <path d="M20 32 Q32 20 44 32 Q44 44 32 48 Q20 44 20 32" fill="none" stroke="#4facfe" stroke-width="2"/>
+                            <circle cx="32" cy="28" r="3" fill="#00f2fe"/>
+                        </svg>
+                    </div>
+                    <h3>Wash & Fold</h3>
+                    <p>Professional washing and folding service for your everyday clothes.</p>
+                    <div class="price">$2.50/lb</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="16" y="20" width="32" height="24" rx="4" fill="none" stroke="#4facfe" stroke-width="2"/>
+                            <line x1="20" y1="24" x2="44" y2="24" stroke="#4facfe" stroke-width="2"/>
+                            <line x1="20" y1="32" x2="44" y2="32" stroke="#4facfe" stroke-width="2"/>
+                            <line x1="20" y1="40" x2="44" y2="40" stroke="#4facfe" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Dry Cleaning</h3>
+                    <p>Gentle dry cleaning for delicate fabrics and special garments.</p>
+                    <div class="price">From $8.99</div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 44 L44 44 L40 20 L24 20 Z" fill="none" stroke="#4facfe" stroke-width="2"/>
+                            <circle cx="32" cy="16" r="4" fill="#00f2fe"/>
+                            <line x1="28" y1="20" x2="36" y2="20" stroke="#4facfe" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Pickup & Delivery</h3>
+                    <p>Convenient door-to-door pickup and delivery service.</p>
+                    <div class="price">Free</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Clean Street, Johannesburg, Gauteng, 3828</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>(+27) 773832782</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hello@cleanandfresh.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Clean & Fresh Laundry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
