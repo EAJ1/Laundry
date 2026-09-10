@@ -1,5 +1,3 @@
-const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-
 // Keep the navigation usable with a keyboard and hide closed mobile links.
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
@@ -73,49 +71,10 @@ form.addEventListener('input', () => {
     status.textContent = '';
 });
 
-// Pause decorative canvas work off screen, in background tabs, or for reduced motion.
-const canvas = document.getElementById('hero-canvas');
-const context = canvas.getContext('2d');
-if (context) {
-    let particles = [];
-    let frame;
-    let visible = true;
-    function resize() {
-        canvas.width = canvas.clientWidth;
-        canvas.height = canvas.clientHeight;
-        particles = Array.from({ length: Math.min(60, Math.floor(canvas.width / 15)) }, () => ({
-            x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-            vx: (Math.random() - 0.5) * 0.5, vy: (Math.random() - 0.5) * 0.5
-        }));
-    }
-    function animate() {
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.fillStyle = 'rgba(79, 172, 254, 0.45)';
-        for (const particle of particles) {
-            particle.x += particle.vx;
-            particle.y += particle.vy;
-            if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
-            if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
-            context.beginPath();
-            context.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
-            context.fill();
-        }
-        frame = requestAnimationFrame(animate);
-    }
-    function updateAnimation() {
-        cancelAnimationFrame(frame);
-        if (!motionPreference.matches && !document.hidden && visible) animate();
-        else context.clearRect(0, 0, canvas.width, canvas.height);
-    }
-    resize();
-    window.addEventListener('resize', resize);
-    document.addEventListener('visibilitychange', updateAnimation);
-    motionPreference.addEventListener('change', updateAnimation);
-    if ('IntersectionObserver' in window) {
-        new IntersectionObserver(entries => {
-            visible = entries[0].isIntersecting;
-            updateAnimation();
-        }).observe(canvas);
-    }
-    updateAnimation();
-}
+// Service links carry the selected service into the enquiry form.
+document.querySelectorAll('[data-service]').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('service').value = link.dataset.service;
+        form.dispatchEvent(new Event('input'));
+    });
+});

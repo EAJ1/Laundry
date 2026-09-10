@@ -1,6 +1,6 @@
 # Clean & Fresh Laundry
 
-A responsive, static laundry service website built with HTML, CSS, JavaScript, SVG, and Canvas. No build step or runtime dependencies are required. Google Fonts supplies Poppins when an internet connection is available; otherwise the browser uses a sans-serif fallback.
+A responsive, static laundry service website built with HTML, CSS, JavaScript, and SVG. No build step or runtime dependencies are required. Google Fonts supplies Manrope and DM Sans when an internet connection is available; otherwise the browser uses a sans-serif fallback.
 
 ## Features
 
@@ -10,7 +10,8 @@ A responsive, static laundry service website built with HTML, CSS, JavaScript, S
 - Light and dark themes, following system preference and saving manual choices when storage is available
 - Keyboard-accessible mobile navigation, Escape to close, visible focus indicators, and a skip link
 - Responsive layouts and reduced-motion support
-- Decorative canvas particles that pause outside the hero and in background tabs
+- Custom CSS laundry illustration, a matching SVG favicon, and an ivory, sage, and forest-green identity
+- Service links that preselect the enquiry form, plus a practical FAQ section
 
 ## Run locally
 
@@ -52,7 +53,8 @@ Form details are used locally to construct a `mailto:` link; this site does not 
 ```text
 index.html   Page content and enquiry form
 style.css    Layout, themes, responsive styles, and animations
-script.js    Navigation, theme preference, email drafts, and canvas
+script.js    Navigation, theme preference, and email drafts
+favicon.svg  Brand icon for browser tabs
 TODO.md      Completed improvements and remaining launch checks
 LICENSE      MIT license
 README.md    Setup and operational notes
@@ -60,7 +62,7 @@ README.md    Setup and operational notes
 
 ## Customization
 
-Update business copy and links in `index.html`, colours and layout in `style.css`, and the email draft recipient in `script.js`. The main palette uses teal `#64ffda`, navy `#0a192f`, and blue `#4facfe`.
+Update business copy and links in `index.html`, colours and layout in `style.css`, and the email draft recipient in `script.js`. The light palette uses ivory `#f6f5ef`, forest green `#214f43`, and sage `#e2e9d9`. Theme colours are CSS custom properties at the top of `style.css`. The hero illustration is built in CSS and requires no image downloads.
 
 ## License
 
