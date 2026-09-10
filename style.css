@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -97,7 +95,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(45deg, #64ffda, #0a192f);
+    background: #64ffda;
     transition: width 0.3s ease;
 }
 
@@ -169,13 +167,6 @@ body {
     z-index: 1;
 }
 
-.theme-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 10;
-}
-
 #theme-btn {
     background: rgba(255, 255, 255, 0.2);
     border: 2px solid white;
@@ -192,49 +183,6 @@ body {
 #theme-btn:hover {
     background: rgba(255, 255, 255, 0.3);
     transform: scale(1.1);
-}
-
-.dark-theme .hero {
-    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
-}
-
-.dark-theme body {
-    background-color: #0c0c0c;
-    color: #ffffff;
-}
-
-.dark-theme .navbar {
-    background: rgba(0, 0, 0, 0.95);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .nav-menu a {
-    color: #ffffff;
-}
-
-.dark-theme .services {
-    background: #1a1a2e;
-}
-
-.dark-theme .service-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.dark-theme .about {
-    background: #0c0c0c;
-}
-
-.dark-theme .feature {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.dark-theme .contact {
-    background: #1a1a2e;
-}
-
-.dark-theme .footer {
-    background: #000;
 }
 
 .hero-container {
@@ -273,7 +221,7 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #64ffda, #0a192f);
+    background: #64ffda;
     color: #0a192f;
     border: none;
     padding: 1rem 2rem;
@@ -934,4 +882,53 @@ body {
     .footer p {
         font-size: 0.9rem;
     }
+}
+
+/* Accessible controls, booking information, and light theme. */
+html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+body { color-scheme: dark; }
+main { overflow: clip; }
+.hero { padding: 120px 0 60px; }
+.hero-buttons { flex-wrap: wrap; align-items: center; }
+.btn-primary, .btn-secondary { display: inline-block; text-align: center; text-decoration: none; }
+a { color: #64ffda; overflow-wrap: anywhere; }
+button, input, select, textarea { font: inherit; }
+.hamburger { border: 0; background: transparent; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; }
+:focus-visible, .form-group input:focus-visible, .form-group textarea:focus-visible { outline: 3px solid #4facfe; outline-offset: 4px; }
+.skip-link { position: fixed; top: -100px; left: 16px; z-index: 2000; padding: 12px; background: #0a192f; color: white; }
+.skip-link:focus { top: 10px; }
+.form-group label { display: block; margin-bottom: 0.4rem; }
+.form-group select { width: 100%; padding: 1rem; border: 1px solid #b8c5d1; border-radius: 10px; background: #0a192f; color: white; }
+.steps { list-style-position: inside; }
+.steps li { padding: 1.5rem; border: 1px solid #668099; border-radius: 15px; }
+.steps h3 { margin-bottom: 0.75rem; }
+.booking-details { margin-top: 2rem; padding: 1.5rem; border-left: 3px solid #64ffda; }
+.booking-details h3 { margin-bottom: 0.5rem; }
+.about-content { min-width: 0; }
+.light-theme { color-scheme: light; color: #17334a; background: #f5fafc; }
+.light-theme .hero, .light-theme .services { background: linear-gradient(135deg, #f5fafc, #dceff6); }
+.light-theme .about, .light-theme .contact, .light-theme .footer { background: #f5fafc; }
+.light-theme .section-title, .light-theme .service-card h3, .light-theme .feature h4,
+.light-theme .info-item h4, .light-theme .hero-subtitle { color: #17334a; }
+.light-theme .hero-title, .light-theme .price, .light-theme main a, .light-theme .footer { color: #006b59; }
+.light-theme .service-card p, .light-theme .feature p, .light-theme .info-item p { color: #39556a; }
+.light-theme .service-card, .light-theme .feature { background: white; border-color: #bfd3df; }
+.light-theme .btn-secondary { color: #17334a; border-color: #17334a; }
+.light-theme main .btn-primary { color: #0a192f; }
+.light-theme .form-group input, .light-theme .form-group textarea, .light-theme .form-group select { background: white; color: #17334a; border-color: #668099; }
+.light-theme .form-group input::placeholder, .light-theme .form-group textarea::placeholder { color: #39556a; }
+@media (max-width: 768px) {
+    .nav-menu { visibility: hidden; }
+    .nav-menu.active { visibility: visible; }
+    .logo { font-size: 1.15rem; }
+    .nav-actions { gap: 0.35rem; }
+    .logo-icon { display: none; }
+}
+@media (max-width: 480px) {
+    .nav-menu { top: 70px; height: calc(100dvh - 70px); }
+    .hero { padding-top: 110px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
 }

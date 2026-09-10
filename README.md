@@ -1,90 +1,67 @@
 # Clean & Fresh Laundry
 
-A modern, responsive website for a premium laundry service featuring interactive animations, dark mode toggle, and mobile-optimized design.
+A responsive, static laundry service website built with HTML, CSS, JavaScript, SVG, and Canvas. No build step or runtime dependencies are required. Google Fonts supplies Poppins when an internet connection is available; otherwise the browser uses a sans-serif fallback.
 
-## 🌟 Features
+## Features
 
-- **Interactive Hero Section**: Animated canvas background with floating particles and interactive SVG illustrations
-- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices
-- **Dark Mode Toggle**: Switch between light and dark themes
-- **Smooth Animations**: CSS animations and JavaScript-powered interactions
-- **Contact Form**: Functional contact form with validation
-- **Service Showcase**: Highlighting wash & fold, dry cleaning, and pickup & delivery services
-- **Eco-Friendly Focus**: Emphasizing sustainable practices
+- Wash & fold, dry cleaning, and pickup & delivery service information
+- Pickup enquiry form with labelled fields and browser validation
+- Email draft preparation with service, suburb, preferred date, and laundry details
+- Light and dark themes, following system preference and saving manual choices when storage is available
+- Keyboard-accessible mobile navigation, Escape to close, visible focus indicators, and a skip link
+- Responsive layouts and reduced-motion support
+- Decorative canvas particles that pause outside the hero and in background tabs
 
-## 🛠️ Technologies Used
+## Run locally
 
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Modern styling with gradients, animations, and responsive design
-- **JavaScript (ES6+)**: Interactive functionality and DOM manipulation
-- **SVG**: Scalable vector graphics for illustrations and icons
-- **Canvas API**: Dynamic particle animations
+Open `index.html` in a modern browser, or serve the directory:
 
-## 🚀 Getting Started
-
-### Prerequisites
-
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-
-### Installation
-
-1. Clone or download the repository
-2. Navigate to the project directory
-3. Open `index.html` in your web browser
-
-No additional setup or dependencies required!
-
-## 📱 Responsive Design
-
-The website is fully responsive with breakpoints for:
-- Desktop: 1200px+
-- Tablet: 768px - 1199px
-- Mobile: 480px - 767px
-- Extra Small: < 480px
-
-## 🎨 Customization
-
-### Colors
-- Primary: `#64ffda` (Teal)
-- Background: `#0a192f` (Dark Navy)
-- Accent: `#4facfe` (Blue)
-
-### Fonts
-- Primary: Poppins (Google Fonts)
-
-## 📂 Project Structure
-
-```
-laundry-website/
-├── index.html          # Main HTML file
-├── style.css           # Stylesheet
-├── script.js           # JavaScript functionality
-├── TODO.md             # Development notes
-└── README.md           # This file
+```sh
+python3 -m http.server 8000
 ```
 
-## 🌐 Browser Support
+Then visit `http://localhost:8000`. Stop the server with Ctrl+C.
 
-- Chrome 80+
-- Firefox 75+
-- Safari 13+
-- Edge 80+
+## Deploy with GitHub Pages
 
-## 📄 License
+Repository: [EAJ1/Laundry](https://github.com/EAJ1/Laundry)
 
-This project is open source and available under the [MIT License](LICENSE).
+In repository **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/ (root)**, and save. GitHub Pages publishes the static files directly; `.nojekyll` disables Jekyll processing.
 
-## 🤝 Contributing
+Expected website address: https://eaj1.github.io/Laundry/
 
-Feel free to submit issues and enhancement requests!
+To publish later changes, commit them and push to `main`. Check the repository's **Actions** tab for the Pages deployment result. See [GitHub's publishing instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
-## 📞 Contact
+## Contact flow
 
-For inquiries about the laundry service:
-- Email: hello@cleanandfresh.com
-- Phone: (+27) 773832782
-- Address: 123 Clean Street, Johannesburg, Gauteng, 3828
+The form does **not** send messages to a server or confirm bookings. “Prepare Email Enquiry” creates an “Open email draft” link. The visitor opens that link, reviews the draft in their email application, and sends it themselves. Their entries remain on the page. If no email application is configured, they can use the displayed email address or phone number directly.
 
----
+Form details are used locally to construct a `mailto:` link; this site does not store them. Theme preference is saved in browser local storage when available. Direct email and phone links remain usable without JavaScript.
 
-*Experience the joy of fresh, perfectly laundered garments with our premium laundry service.*
+## Before publishing
+
+- Verify or replace the supplied email (`hello@cleanandfresh.com`) and phone (`+27 77 383 2782`) in `index.html`, and the email recipient in `script.js`. These inherited details have not been verified.
+- Confirm the business location and collection suburbs, opening hours, pickup slots, and turnaround times.
+- Supply actual prices in rand, weight units where applicable, minimum order amounts, and delivery fees. The page currently invites a quote instead of displaying unverified rates.
+- Confirm service descriptions and any business promises before adding them.
+- For direct website submissions, configure a real form endpoint and show success only after it confirms receipt. No email service is configured here.
+- Check desktop and mobile layouts, both themes, keyboard navigation, reduced motion, and the email draft in your target browsers. No specific minimum browser versions are certified.
+
+## Project structure
+
+```text
+index.html   Page content and enquiry form
+style.css    Layout, themes, responsive styles, and animations
+script.js    Navigation, theme preference, email drafts, and canvas
+TODO.md      Completed improvements and remaining launch checks
+LICENSE      MIT license
+README.md    Setup and operational notes
+```
+
+## Customization
+
+Update business copy and links in `index.html`, colours and layout in `style.css`, and the email draft recipient in `script.js`. The main palette uses teal `#64ffda`, navy `#0a192f`, and blue `#4facfe`.
+
+## License
+
+Available under the [MIT License](LICENSE).

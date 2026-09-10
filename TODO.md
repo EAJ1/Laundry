@@ -1,7 +1,12 @@
-# Mobile Readability Improvements TODO
+# Website progress
 
-- [x] Add media query for smaller screens (max-width: 480px)
-- [x] Increase font sizes and line heights for better readability on mobile
-- [x] Ensure touch targets (buttons, links) meet minimum size requirements (44px)
-- [x] Adjust spacing and padding for cramped screens
-- [x] Optimize the hero section layout for mobile
+- [x] Replace simulated sending with an explicitly labelled email draft flow
+- [x] Add pickup enquiry fields and a how-it-works section
+- [x] Unify branding and remove unverified prices and delivery promises
+- [x] Fix duplicate theme controls and persist theme preference
+- [x] Add form labels, keyboard navigation, focus styles, and reduced-motion support
+- [x] Update README and include the documented MIT license
+- [ ] Verify business contact details before publishing
+- [ ] Supply confirmed rates, coverage, hours, turnaround times, and delivery conditions
+- [ ] Configure a mail endpoint if direct website submission is required
+- [ ] Complete visual and email-client checks in target desktop and mobile browsers
