@@ -152,10 +152,11 @@ p {
 }
 
 .brand-mark {
-    font-family:Georgia,serif;
+    display:block;
+    width:1em;
+    height:1em;
+    flex-shrink:0;
     font-size:3.2rem;
-    line-height:1;
-    color:var(--accent);
 }
 
 .brand-subtitle {

@@ -1,3 +1,5 @@
+<img src="logo.svg" alt="Clean & Fresh Laundry washing-machine logo" width="80" height="80">
+
 # Clean & Fresh Laundry
 
 A responsive, static laundry service website built with HTML, CSS, JavaScript, and SVG. No build step or runtime dependencies are required. Google Fonts supplies Manrope and DM Sans when an internet connection is available; otherwise the browser uses a sans-serif fallback.
@@ -54,7 +56,8 @@ Form details are used locally to construct a `mailto:` link; this site does not 
 index.html   Page content and enquiry form
 style.css    Layout, themes, responsive styles, and animations
 script.js    Navigation, theme preference, and email drafts
-favicon.svg  Brand icon for browser tabs
+logo.svg     Washing-machine brand icon
+favicon.svg  Matching icon for browser tabs
 TODO.md      Completed improvements and remaining launch checks
 LICENSE      MIT license
 README.md    Setup and operational notes
@@ -62,7 +65,7 @@ README.md    Setup and operational notes
 
 ## Customization
 
-Update business copy and links in `index.html`, colours and layout in `style.css`, and the email draft recipient in `script.js`. The light palette uses ivory `#f6f5ef`, forest green `#214f43`, and sage `#e2e9d9`. Theme colours are CSS custom properties at the top of `style.css`. The hero illustration is built in CSS and requires no image downloads.
+Update business copy and links in `index.html`, colours and layout in `style.css`, and the email draft recipient in `script.js`. The light palette uses ivory `#f6f5ef`, forest green `#214f43`, and sage `#e2e9d9`. Theme colours are CSS custom properties at the top of `style.css`. The header, footer, and README use `logo.svg`; keep `favicon.svg` in sync when changing the brand icon. The hero illustration is built in CSS and requires no image downloads.
 
 ## License
 
