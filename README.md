@@ -27,7 +27,7 @@ Then visit `http://localhost:8000`. Stop the server with Ctrl+C.
 
 ## Responsive layout
 
-Phones, iPads, and laptops share the same logo, content, services, and enquiry flow. Decorative icons, service symbols, arrows, checkmarks, and the sun/moon theme control use inline SVG paths with shared sizing and colours, so their shapes do not depend on device fonts or emoji. The menu bars and status dot are drawn in CSS. Columns and navigation adapt to the available screen width; the pickup link remains available in the compact navigation. The contact section stacks on tablets, and form fields stack on narrow phones. Form text uses 16px sizing for comfortable mobile entry.
+Phones, iPads, and laptops share the same logo, content, services, and enquiry flow. The “Care is in the little things” illustration uses a drawn heart. Decorative icons, service symbols, arrows, checkmarks, and the sun/moon theme control use inline SVG paths with shared sizing and colours, so their shapes do not depend on device fonts or emoji. The menu bars and status dot are drawn in CSS. Columns and navigation adapt to the available screen width; the pickup link remains available in the compact navigation. The contact section stacks on tablets, and form fields stack on narrow phones. Form text uses 16px sizing for comfortable mobile entry.
 
 Verified in headless Chrome at widths of 320, 375, 390, 600, 768, 820, 834, 1024, 1180, 1366, and 1440 pixels: no horizontal page overflow. Mobile navigation opening and Escape dismissal, theme toggle, and email draft preparation were also checked. These are browser viewport checks, not physical iPad or iPhone Safari certification. Light/dark appearance follows each device’s preference unless manually changed.
 
