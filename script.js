@@ -30,7 +30,6 @@ let savedTheme;
 try { savedTheme = localStorage.getItem('laundry-theme'); } catch { /* Storage can be unavailable. */ }
 function applyTheme(dark) {
     document.body.classList.toggle('light-theme', !dark);
-    themeButton.textContent = dark ? '☀️' : '🌙';
     themeButton.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
 }
 applyTheme(savedTheme === 'dark' || (savedTheme !== 'light' && systemTheme.matches));

@@ -1262,3 +1262,27 @@ textarea {
         transition:none!important;
     }
 }
+
+/* Shared vector shapes avoid platform-dependent text and emoji icons. */
+.icon {
+    display:inline-block;
+    width:1em;
+    height:1em;
+    vertical-align:-.125em;
+    flex-shrink:0;
+}
+#theme-btn {
+    display:grid;
+    place-items:center;
+}
+#theme-btn .icon {
+    width:20px;
+    height:20px;
+    grid-area:1 / 1;
+}
+.theme-moon,body.light-theme .theme-sun {
+    display:none;
+}
+body.light-theme .theme-moon {
+    display:inline-block;
+}
